@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNet.Identity;
+
+@model Lab08.MVC.Domain.UserInfoModel
+
+@{
+    ViewBag.Title = User.Identity.GetUserName();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Role == "User")
+{
+    @Html.Partial("UserAccount", Model);
+}
+else
+{
+    @Html.Partial("AdminAccount", Model);
+}

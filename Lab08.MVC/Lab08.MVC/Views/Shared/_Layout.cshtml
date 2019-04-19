@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNet.Identity;
+@using System.Web.Optimization;
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/Styles")
+
+</head>
+
+<body>
+    <div class="bgdiv">
+        <video loop muted autoplay class="bg">
+            <source src="~/Content/Videos/videoBackground2.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <div class="wrapper">
+        <div class="content">
+            <div class="navbar">
+                <div class="pageTitle">
+                    Electronic Library
+                </div>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { }, new { @class = "link" })</li>
+                    <li>@Html.ActionLink("Contacts", "Contacts", "Home", new { }, new { @class = "link" })</li>
+                </ul>
+
+                <ul>
+                    @if (@User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink(User.Identity.GetUserName(), "Index", "User", new { }, new { @class = "link" })</li>
+                        <li>@Html.ActionLink("Sign Out", "Logout", "User", new { }, new { @class = "link" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Register", "Register", "User", new { }, new { @class = "link" })</li>
+                        <li>@Html.ActionLink("Sign In", "Login", "User", new { }, new { @class = "link" })</li>
+                    }
+                </ul>
+            </div>
+
+            @RenderBody()
+
+        </div>
+        <div class="footer">
+            <p>Copyright © 2019 Raman Zinevich, BY. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+﻿@model Lab08.MVC.Domain.UserLoginModel
+
+@{
+    ViewBag.Title = "Sign In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="loginForm">
+    <h2 class="loginLabel">Sign In</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+        <div class="loginSubform">
+            <label>Login</label>
+            @Html.EditorFor(x => x.Login)
+        </div>
+        <div class="loginSubform">
+            <label>Password</label>
+            @Html.EditorFor(x => x.Password)
+        </div>
+        @Html.ValidationSummary()
+        <button type="submit">Sign In</button>
+    }
+</div>

@@ -1,0 +1,107 @@
+﻿.link {
+    padding: 10px 25px;
+    transition: color, background, box-shadow;
+    transition-duration: .5s, .8s, .5s;
+    transition-timing-function: ease;
+    color: white;
+    background-color: #0d47a1;
+    text-decoration: none;
+    font-size: 15px;
+    box-shadow: none;
+}
+
+.link:hover {
+    transition: color, background, box-shadow;
+    transition-duration: .5s, .8s, .5s;
+    transition-timing-function: ease;
+    color: #1a237e;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.profile {
+    position: relative;
+    width: 60%;
+    height: 280px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.profile div {
+    background-color: white;
+    margin: 10px;
+    height: 250px;
+    float: left;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.profile .info {
+    padding-left: 30px;
+    float: right;
+    width: 70%;
+}
+
+
+.profile .info h1,
+.profile .info h2,
+.profile .info h3,
+.profile .info h4,
+.profile .info h5 {
+    color: #4488AF;
+    background: white;
+}
+
+.profile .info h1 {
+    text-shadow: 2px 2px 7px rgba(28, 110, 164, 0.79);
+    color: #0D47A1;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.books {
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+
+.lib {
+    margin: 10px;
+    padding: 5px 0;
+    padding-right: 8px;
+}
+
+.lib p {
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.books .lib .link {
+    float: right;
+    margin: 5px 20px;
+}
+
+.book {
+    background: white;
+    margin: 10px;
+    padding: 5px 0;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
+}
+
+.book p {
+    text-shadow: 2px 2px 7px rgba(28, 110, 164, 0.79);
+    margin-left: 20px;
+    color: #0D47A1;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.book .link {
+    float: right;
+    margin: 5px 20px;
+}

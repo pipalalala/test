@@ -1,0 +1,42 @@
+﻿@model Lab08.MVC.Domain.BookProfile
+
+@{
+    ViewBag.Title = "Adding new book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="editorForm">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="editorSubform">
+            <label>Title</label>
+            @Html.EditorFor(model => model.Title)
+        </div>
+        <div class="editorSubform">
+            <label>Creation year</label>
+            @Html.EditorFor(x => x.CreationYear)
+        </div>
+        <div class="editorSubform">
+            <label>Pages count</label>
+            @Html.EditorFor(model => model.PagesCount)
+        </div>
+        <div class="editorSubform">
+            <label>Authors</label>
+            @Html.EditorFor(model => model.Authors)
+        </div>
+        <div class="editorSubform">
+            <label>Genres</label>
+            @Html.EditorFor(model => model.Genres)
+        </div>
+
+        @Html.ValidationSummary()
+        <button class="addBook" type="submit">Add</button>
+    }
+</div>
+
+
+
+
+

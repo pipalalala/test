@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Error";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Error</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Styles/Error.css")" type="text/css" />
+</head>
+
+<body>
+    <div class="error">
+        <div class="massage">
+            <h1>Oops!</h1>
+            <h3>Something went wrong here.</h3>
+            <h5>We're working on it and we'll get it fixed as soon as possible.</h5>
+            <h5 class="lastChild">You can go back.</h5>
+            @Html.ActionLink("Home", "Index", "Home")
+        </div>
+        <div class=errorImg>
+            <img src="~/Content/Images/errorImg.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

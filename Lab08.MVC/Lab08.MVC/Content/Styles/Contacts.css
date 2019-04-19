@@ -1,0 +1,122 @@
+﻿.contacts {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+.contacts h3 {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.icons
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons > div
+{
+    position: relative;
+    display: flex;
+    width: 70px;
+    height: 90px;
+    margin: 20px 40px;
+    transform: rotate(-30deg) skew(25deg);
+    justify-content: center;
+    align-items: center;
+}
+
+.icons div div a img
+{
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.icons div div
+
+{
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 75px;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons .google div
+{
+    background-color: #dd4b39;
+}
+
+.icons .facebook div
+{
+    background-color: #3b5999;
+}
+
+.icons .instagram div
+{
+    background-color: #e4405f;
+}
+
+.icons .twitter div
+{
+    background-color: #55acee;
+}
+
+.icons .vk div
+{
+	background-color: #4b77a8;
+}
+
+.icons div:hover div:nth-child(5)
+{
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+.icons div:hover div:nth-child(4)
+{
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transform: translate(30px, -30px);
+    opacity: .8;
+}
+
+.icons div:hover div:nth-child(3)
+{
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transform: translate(20px, -20px);
+    opacity: .6;
+}
+
+.icons div:hover div:nth-child(2)
+{
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transform: translate(10px, -10px);
+    opacity: .4;
+}
+
+.icons div:hover div:nth-child(1)
+{
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transform: translate(0px, 0px);
+    opacity: .2;
+}

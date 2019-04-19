@@ -1,0 +1,35 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+
+.error404 {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.error404 div {
+    width: 100%;
+    text-align: center;
+}
+
+.error404 .errorImg img {
+    height: 400px;
+}
+
+.error404 .massage h1 {
+    margin-right: 30px;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 80px;
+    color: #354CB3;
+}
+
+.error404 .massage h3 {
+    margin-right: 30px;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 25px;
+}

@@ -1,0 +1,30 @@
+﻿@model Lab08.MVC.Domain.UserEditModel
+
+@{
+    ViewBag.Title = "Profile editing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="editorForm">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="editorSubform">
+            <label>Login</label>
+            @Html.EditorFor(x => x.Login)
+        </div>
+        <div class="editorSubform">
+            <label>First Name</label>
+            @Html.EditorFor(x => x.FirstName)
+        </div>
+        <div class="editorSubform">
+            <label>Last Name</label>
+            @Html.EditorFor(x => x.LastName)
+        </div>
+
+        @Html.ValidationSummary()
+        <button type="submit">Save</button>
+    }
+</div>
+

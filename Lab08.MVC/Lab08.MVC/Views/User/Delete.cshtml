@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Profile deleting";
+}
+
+<div class="deleteForm">
+    <form method="post">
+        <h2>Вы уверены, что хотите удалить свой аккаунт?</h2>
+        @Html.ActionLink("No", "Index", "User", new { }, new { @class = "link" })
+        <button type="submit">Yes</button>
+    </form>
+</div>

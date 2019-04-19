@@ -1,0 +1,34 @@
+﻿.index {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+.index h1{
+    font-size: 60px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.index h2 {
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.about {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    margin-top: 240px;
+    margin-bottom: 30px;
+    
+}
+
+.about h3 {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+﻿@model Lab08.MVC.Domain.BookFullInfoModel
+
+@{
+    ViewBag.Title = @Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    @if (ViewBag.Role == "Admin")
+    {
+        <h1>@Model.Title</h1>
+        <h3>by @Model.Authors</h3>
+        <h5>Creation year: @Model.CreationYear</h5>
+        <h5>Pages count: @Model.PagesCount</h5>
+        <h3>Genres: @Model.Genres</h3>
+        if (Model.UserName != null)
+        {
+            <h5 style="color: red">@Model.UserName takes it</h5>
+        }
+    }
+    else
+    {
+        <h1>@Model.Title</h1>
+        <h3>by @Model.Authors</h3>
+        <h5>Creation year: @Model.CreationYear</h5>
+        <h5>Pages count: @Model.PagesCount</h5>
+        <h3>Genres: @Model.Genres</h3>
+    }
+</div>

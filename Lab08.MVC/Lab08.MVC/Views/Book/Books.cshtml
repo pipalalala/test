@@ -1,0 +1,28 @@
+﻿@using Lab08.MVC.Domain;
+@model IEnumerable<BookInfoModel>
+
+@{
+    ViewBag.Title = "Free books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Role == "User")
+{
+    <div class="books">
+        @if (Model.Count() == 0)
+        {
+            <h1 class="labelMassage">We are sorry. No free books right now.</h1>
+        }
+        else
+        {
+            foreach (var book in Model)
+            {
+                <div class="book">
+                    <p>@book.Title by @book.Authors</p>
+                    @Html.ActionLink("Add to collection", "AddToCollection", "Book", new { id = book.Id }, new { @class = "link" })
+                    @Html.ActionLink("More Info", "Info", "Book", new { id = book.Id }, new { @class = "link" })
+                </div>
+            }
+        }
+    </div>
+}

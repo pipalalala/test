@@ -1,0 +1,35 @@
+﻿@model Lab08.MVC.Domain.UserRegisterModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="registerForm">
+    <h2 class="registerLabel">Register</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+        <div class="registerSubform">
+            <label>Login</label>
+            @Html.EditorFor(x => x.Login)
+        </div>
+        <div class="registerSubform">
+            <label>Email</label>
+            @Html.EditorFor(x => x.Email)
+        </div>
+        <div class="registerSubform">
+            <label>Password</label>
+            @Html.EditorFor(x => x.Password)
+        </div>
+        <div class="registerSubform">
+            <label>Password confirm</label>
+            @Html.EditorFor(x => x.PasswordConfirm)
+        </div>
+        @Html.ValidationSummary()
+        <button type="submit">Register</button>
+    }
+</div>

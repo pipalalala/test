@@ -1,0 +1,34 @@
+﻿@model Lab08.MVC.Domain.UserInfoModel
+
+@{
+    ViewBag.Title = @Model.Login;
+}
+
+<div class="profile">
+    <div class="image">
+        <img src="https://www.pngkey.com/png/detail/115-1150420_avatar-png-pic-male-avatar-icon-png.png" alt="">
+    </div>
+    <div class="info">
+        <h1>@Model.FirstName @Model.LastName</h1>
+        <h5>Registered as @Model.Login</h5>
+        <h3>You have @Model.BooksCount books</h3>
+        <br>
+        @Html.ActionLink("Edit profile", "Edit", "User", new { }, new { @class = "link" })
+        @Html.ActionLink("Delete profile", "Delete", "User", new { }, new { @class = "link" })
+    </div>
+</div>
+<div class="books">
+    <div class="lib">
+        <p>Your library: </p>
+        @Html.ActionLink("Add book to personal collection", "Books", "Book", new { }, new { @class = "link" })
+    </div>
+
+    @foreach (var book in Model.Books)
+    {
+        <div class="book">
+            <p>@book.Title by @book.Authors</p>
+            @Html.ActionLink("Return book", "RemoveFromCollection", "Book", new { id = book.Id }, new { @class = "link" })
+            @Html.ActionLink("More Info", "Info", "Book", new { id = book.Id }, new { @class = "link" })
+        </div>
+    }
+</div>
